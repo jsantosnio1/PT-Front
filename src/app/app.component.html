@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <span>Prueba Tecnica</span>
+
+  <button mat-button>
+    <mat-icon>home</mat-icon>
+    Home
+  </button>    
+  <button mat-button [matMenuTriggerFor]="admGenMenu">
+    <mat-icon>settings</mat-icon>
+    General
+  </button>
+  <mat-menu #admGenMenu="matMenu" xPosition="after">
+    <button mat-menu-item (click)="ListarArt()">Artistas</button>
+    <button mat-menu-item (click)="ListarMus()">Museos</button>
+    <button mat-menu-item (click)="ListarObr()">Obras</button>
+  </mat-menu>
+  <button mat-button>
+    <mat-icon>logout</mat-icon>
+    Salir
+  </button>    
+</mat-toolbar>
+<!-- Toolbar -->
+<div style="text-align:center">
+</div>
+<div class="card-body">
+  <div class="container-fluid">
+    <div class="text-center">
+      <img src="./assets/images/Captura.png" class="img-responsive center-block"
+        style="max-height:200px;padding-bottom:50px" />
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
